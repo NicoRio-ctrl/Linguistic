@@ -1,0 +1,209 @@
+*{
+    /*Ajustes generales*/
+    padding: 0%;
+    margin: 0%;
+}
+.options{
+    /*Dimensiones*/
+    width: auto;
+    height: 18%;
+
+    /*Colores*/
+    background-color: #d4d8f0;
+}
+.options .user{
+    /*Dimensiones*/
+    width: auto;
+    height: 50%;
+
+    /*Display*/
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.options .user p{
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+
+    /*Margenes*/
+    margin: 1% 4% 0% 0.4%;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Otros*/
+    cursor: pointer;
+    z-index: 1;
+}
+.options .user p:hover{
+    /*Otros*/
+    text-decoration: underline;
+}
+.options .user p:active{
+    /*Otros*/
+    text-decoration: none;
+}
+.options .user i{
+    /*Tamaño*/
+    font-size: 36px;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Margenes*/
+    margin-top: 1%;
+    z-index: 1;
+}
+.options .nav{
+    /*Dimensiones*/
+    width: auto;
+    height: 50%;
+
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.options .nav a{
+    /*Colores*/
+    color:#232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+
+    /*Margenes*/
+    margin: 0% 2% 0.7% 2%;
+
+    /*Otros*/
+    text-decoration: none;
+    z-index: 1;
+}
+.options a:hover{
+    /*Otros*/
+    text-decoration: underline;
+}
+.options a:active{
+    /*Otros*/
+    text-decoration: none;
+}
+.welcome{
+    /*Colores*/
+    background-color: #232946;
+
+    /*Dimensiones del contenedor*/
+    width: auto;
+    height: 72%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*Otros*/
+    z-index: 2;
+}
+.welcome h1{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+
+    /*Otros*/
+    z-index: 2;
+}
+.welcome div{
+    /*Dimensiones*/
+    width: 52.5%;
+
+    /*Display*/
+    text-align: center;
+
+    /*Margenes*/
+    margin: 0% 0% 1% 0%;
+}
+.welcome p{
+    /*Colores*/
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+    /*Otros*/
+    z-index: 2;
+}
+.welcome a{
+    /*Dimensiones*/
+    padding: 0.6% 2.4% 0.6% 2.4%;
+
+    /*Bordes*/
+    border: 1px solid #fffffe;
+    border-radius: 6px;
+
+    /*Colores*/
+    background-color: transparent;
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+
+    /*Otros*/
+    text-decoration: none;
+    z-index: 2;
+}
+.welcome a:hover{
+    /*Colores*/
+    background-color: #eebbc3;
+    color: #232946;
+
+    /*Bordes*/
+    border: 1px solid #eebbc3;
+
+    /*Animación*/
+    transition: 0.2s;
+}
+.welcome a:hover:active{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Animación*/
+    transition: 0s;
+}
+.gramatica{
+    /*Dimensiones*/
+    width: auto;
+    height: 90%;
+
+    /*Colores*/
+    background-color: #d4d8f0;
+}
+.cuestionario{
+    /*Dimensiones*/
+    width: auto;
+    height: 80%;
+
+    /*Colores*/
+    background-color: #232946;
+
+    /*Otros*/
+    z-index: 2;
+}
+.nosotros{
+    /*Dimensiones*/
+    width: auto;
+    height: 90%;
+
+    /*Colores*/
+    background-color: #eebbc3;
+}
