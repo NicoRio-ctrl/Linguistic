@@ -180,24 +180,254 @@
     /*Animación*/
     transition: 0s;
 }
-.gramatica{
+
+
+
+
+
+
+
+
+
+/*ESTA PARTE DEL CÓDIGO ESTÁ EN OBRAS*/
+.gram-vocab-writt{
     /*Dimensiones*/
     width: auto;
     height: 90%;
 
     /*Colores*/
     background-color: #d4d8f0;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
 }
+.gram-vocab-writt h1{
+    /*Display*/
+    text-align: center;
+}
+.gram-vocab-writt p{
+    /*Display*/
+    text-align: center;
+}
+.contenedor-temas{
+    /*Display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.gram-vocab-writt .vocabulario{
+    /*Prueba*/
+    width: 20%;
+    background-color: red;
+}
+.gram-vocab-writt .gramatica{
+    /*Prueba*/
+    width: 20%;
+    background-color: yellow;
+}
+.gram-vocab-writt .writtings{
+    /*Prueba*/
+    width: 20%;
+    background-color: pink;
+}
+/*ESTA PARTE DEL CÓDIGO ESTÁ EN OBRAS*/
+
+
+
+
+
+
+
+
+
+
+
 .cuestionario{
     /*Dimensiones*/
     width: auto;
-    height: 80%;
+    height: 145%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     /*Colores*/
     background-color: #232946;
 
     /*Otros*/
     z-index: 2;
+}
+.cuestionario h1{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Posicionamiento*/
+    text-align: center;
+
+    /*Margenes*/
+    margin-top: -8%;
+}
+.cuestionario div{
+    /*Dimensiones*/
+    width: 52.5%;
+
+    /*Display*/
+    text-align: center;
+}
+.cuestionario p{
+    /*Colores*/
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Margenes*/
+    margin-bottom: 5%;
+}
+.cuestionario .preguntas{
+    /*Dimensiones*/
+    width: 60%;
+    height: 50%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: row;
+}
+.cuestionario .preguntas .pre-izquierda{
+    /*Dimensiones*/
+    width: 50%;
+
+    /*Display*/
+    text-align: left;
+
+    /*Margenes*/
+    margin-right: 1.25%;
+}
+.cuestionario .preguntas .pre-derecha{
+    /*Dimensiones*/
+    width: 50%;
+
+    /*Display*/
+    text-align: left;
+
+    /*Margenes*/
+    margin-left: 1.25%;
+}
+.cuestionario .preguntas .pre-izquierda h2{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+
+    /*Otros*/
+    z-index: 2;
+}
+.cuestionario .preguntas .pre-derecha h2{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+
+    /*Otros*/
+    z-index: 2;
+}
+.cuestionario .preguntas .pre-izquierda label{
+    /*Colores*/
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Margenes*/
+    margin: 0% 0% 0% 5%;
+    line-height: 40px;
+}
+.cuestionario .preguntas .pre-derecha label{
+    /*Colores*/
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Margenes*/
+    margin: 0% 0% 0% 5%;
+    line-height: 40px;
+}
+.cuestionario input[type="button"]{
+    /*Dimensiones*/
+    padding: 0.6% 2.4% 0.6% 2.4%;
+
+    /*Bordes*/
+    border: 1px solid #fffffe;
+    border-radius: 6px;
+
+    /*Colores*/
+    background-color: transparent;
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+
+    /*Otros*/
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2;
+
+    position: relative;
+    bottom: -9%;
+   
+}
+.cuestionario input[type="button"]:hover{
+    /*Colores*/
+    background-color: #eebbc3;
+    color: #232946;
+
+    /*Bordes*/
+    border: 1px solid #eebbc3;
+
+    /*Animación*/
+    transition: 0.2s;
+}
+.cuestionario input[type="button"]:hover:active{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Animación*/
+    transition: 0s;
 }
 .nosotros{
     /*Dimensiones*/

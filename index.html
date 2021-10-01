@@ -38,12 +38,143 @@
 
         </nav>
 
-        <div class="gramatica">
+        <div class="gram-vocab-writt">
+
+            <h1>Aprendizaje</h1>
+            <p>¡Selecciona el tópico que desees o pierdete por el camino del saber!</p>
+
+            <div class="contenedor-temas">
+                <div class="vocabulario">
+                    <h2>Vocabulario</h2>
+    
+                    <div class="input-contenedor-registro">
+                        <select class="input" name="vocabulario" id="tipo">
+                            <option selected="select" id="none">Tema</option>
+                            <option value="1"id="Clima">Ciencia</option>
+                            <option value="2"id="Deportes">Clima</option>
+                            <option value="3"id="Vacaciones">Deportes</option>
+                            <option value="4"id="Viajes">Edad</option>
+                            <option value="5"id="Tiempo">Habitaciones</option>
+                            <option value="6"id="Edad">Tiempo</option>
+                            <option value="7"id="Sentidos">Trabajo</option>
+                            <option value="8"id="Habitaciones">Sentidos</option>
+                            <option value="9"id="Trabajo">Viajes</option>
+                            <option value="10"id="Ciencia">Vacaciones</option>
+                        </select>
+                    </div>
+                    <input type="button" value="Buscar">
+                    <input type="button" value="Aleatorio">
+                </div>
+    
+                <div class="gramatica">
+                    <h2>Gramática</h2>
+    
+                    <div class="input-contenedor-registro">
+                        <select class="input" name="vocabulario" id="tipo">
+                            <option selected="select" id="none">Tema</option>
+                            <option value="1"id="Presente-Simple">Presente Simple</option>
+                            <option value="2"id="Pasado-Simple">Pasado Simple</option>
+                            <option value="3"id="Comparaciones">Comparaciones</option>
+                            <option value="4"id="Verbos-Modales">Verbos Modales</option>
+                            <option value="5"id="Cláusulas-Relativas">Cláusulas Relativas</option>
+                            <option value="6"id="Gerundios">Gerundios</option>
+                            <option value="7"id="Infinitivos">Infinitivos</option>
+                            <option value="8"id="Habla-Indirecta">Habla Indirecta</option>
+                            <option value="9"id="Contables">Contables</option>
+                            <option value="10"id="Incontables">Incontables</option>
+                        </select>
+                    </div>
+                    <input type="button" value="Buscar">
+                    <input type="button" value="Aleatorio">
+                </div>
+    
+                <div class="writtings">
+                    <h2>Writtings</h2>
+    
+                    <div class="input-contenedor-registro">
+                        <select class="input" name="vocabulario" id="tipo">
+                            <option selected="select" id="none">Tema</option>
+                            <option value="1"id="Essay">Essay</option>
+                            <option value="2"id="Article">Article</option>
+                            <option value="3"id="Review">Review</option>
+                            <option value="4"id="Letter">Letter</option>
+                            <option value="5"id="Report">Report</option>
+                        </select>
+                    </div>
+                    <input type="button" value="Buscar">
+                    <input type="button" value="Aleatorio">
+                </div>
+            </div>
             
         </div>
 
         <div class="cuestionario">
 
+            <h1>Un momento...</h1>
+            <div>
+                <p>En Linguistic, nos preocupamos por brindar la mejor experiencia de usuario posible. 
+                Por tal motivo, te pedimos, amablemente, que te detengas unos minutos para responder una 
+                breve encuesta que contribuirá al desarrollo de la página.</p>
+            </div>
+            
+            <div class="preguntas">
+
+                <div class="pre-izquierda">
+                    <h2>¿Cuántos años llevas estudiando?</h2>
+                    <ul>
+                        <li type="none"><label><input type="radio" name="años">&nbsp;No estudio inglés</label></li>
+                        <li type="none"><label><input type="radio" name="años">&nbsp;Menos de un año</label></li>
+                        <li type="none"><label><input type="radio" name="años">&nbsp;De uno a tres años</label></li>
+                        <li type="none"><label><input type="radio" name="años">&nbsp;De tres a seis años</label></li>
+                        <li type="none"><label><input type="radio" name="años">&nbsp;Más de seis años</label></li>
+                    </ul>
+                    <br>
+                    <br>
+
+                    <h2>Consideras que tienes un conocimiento del idioma...</h2>
+                    <ul>
+                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Básico</label></li>
+                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Intermedio</label></li>
+                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Avanzado</label></li>
+                    </ul>
+                    <br>
+                    <br>
+
+                    <h2>¿Dónde estudias?</h2>
+                    <ul>
+                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En el colegio</label></li>
+                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En un instituto</label></li>
+                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En casa (Autodidacta)</label></li>
+                        <li type="none"><label><input type="radio" name="ingles">&nbsp;No estudio en ningún lugar</label></li>
+                        <li type="none"><label><input type="radio" name="ingles">&nbsp;Otro</label></li>
+                    </ul>
+                </div>
+                
+                <div class="pre-derecha">
+                    <h2>¿Cuáles de los siguientes exámenes rendiste?</h2>
+                    <ul>
+                        <li type="none"><label><input type="checkbox">&nbsp;Certificate of Proficiency in English (CPE)</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;Certificate in Advance English (CAE)</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;First Certificate English (FCE)</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;Preliminary English Test (PET)</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;Key English Test (KET)</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;No rendí ningún exámen</label></li>
+                        <li type="none"><label><input type="checkbox">&nbsp;Otro</label></li>
+                    </ul>
+                    <br>
+                    <br>
+               
+                    <h2>Además del inglés y/o tú lengua materna, ¿Manejas otros idiomas?</h2>
+                    <ul>
+                        <li type="none"><label><input type="radio" name="otro">&nbsp;Sí</label></li>
+                        <li type="none"><label><input type="radio" name="otro">&nbsp;No</label></li>
+                    </ul>
+                </div>
+            
+            </div>
+            
+            <input type="button" value="Enviar">
+            
         </div>
 
         <div class="nosotros">
