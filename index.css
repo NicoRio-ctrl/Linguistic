@@ -246,13 +246,14 @@
 .cuestionario{
     /*Dimensiones*/
     width: auto;
-    height: 145%;
+    height: auto;
 
     /*Display*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3.25% 0% 3.25% 0%; 
 
     /*Colores*/
     background-color: #232946;
@@ -276,7 +277,7 @@
     text-align: center;
 
     /*Margenes*/
-    margin-top: -8%;
+    margin-top: 0%;
 }
 .cuestionario div{
     /*Dimensiones*/
@@ -406,10 +407,6 @@
     text-decoration: none;
     cursor: pointer;
     z-index: 2;
-
-    position: relative;
-    bottom: -9%;
-   
 }
 .cuestionario input[type="button"]:hover{
     /*Colores*/
