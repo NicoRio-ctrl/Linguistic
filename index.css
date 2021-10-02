@@ -180,20 +180,10 @@
     /*Animación*/
     transition: 0s;
 }
-
-
-
-
-
-
-
-
-
-/*ESTA PARTE DEL CÓDIGO ESTÁ EN OBRAS*/
 .gram-vocab-writt{
     /*Dimensiones*/
     width: auto;
-    height: 90%;
+    height: 72%;
 
     /*Colores*/
     background-color: #d4d8f0;
@@ -201,48 +191,141 @@
     /*Display*/
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    /*Otros*/
+    z-index: 1;
 }
 .gram-vocab-writt h1{
     /*Display*/
     text-align: center;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+
+    /*Margenes*/
+    margin-top: -2.5%;
+
+    /*Otros*/
+    z-index: 2;
 }
 .gram-vocab-writt p{
     /*Display*/
     text-align: center;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+
+    /*Margenes*/
+    margin-bottom: 2.5%;
+
+    /*Otros*/
+    z-index: 2;
 }
 .contenedor-temas{
+    /*Dimensiones*/
+    width: auto;
+    height: 45%;
+
     /*Display*/
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+
+    /*Otros*/
+    z-index: 2;
 }
-.gram-vocab-writt .vocabulario{
-    /*Prueba*/
-    width: 20%;
-    background-color: red;
+.gram-vocab-writt .contenido{
+    /*Dimensiones*/
+    width: 23%;
+    height: 100%;
+
+    /*Bordes*/
+    border-radius: 6px;
+
+    /*Colores*/
+    background-color: #fffffe;
+
+    /*Otros*/
+    z-index: 3;
+
+    /*Margenes*/
+    margin: 0% 1.2% 0% 1.2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.gram-vocab-writt .gramatica{
-    /*Prueba*/
-    width: 20%;
-    background-color: yellow;
+.gram-vocab-writt .contenido h2{
+    /*Display*/
+    text-align: center;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+
+    /*Margenes*/
+    margin-bottom: 6%;
+    margin-top: -9%;
+
+    /*Otros*/
+    z-index: 3;
 }
-.gram-vocab-writt .writtings{
-    /*Prueba*/
-    width: 20%;
-    background-color: pink;
+.gram-vocab-writt .contenido .input-contenedor-temas #tipo{
+    color: #232946;
+
+    border: 2px solid #232946;
+    border-radius: 6px;
+
+    background-color: transparent;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+
+    width: 70%;
+    height: 57.5%;
+
+    margin-bottom: 1.8%;
+
+    text-indent: 3%;
+
+    outline: none;
 }
-/*ESTA PARTE DEL CÓDIGO ESTÁ EN OBRAS*/
+.gram-vocab-writt .contenido input[type="button"]{
+    /*Dimensiones*/
+    width: 34%;
+    height: 57.5%;
 
+    /*Colores*/
+    background-color: transparent;
+    color: #232946;
 
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
 
-
-
-
-
-
-
-
-
+    /*Bordes*/
+    border: 2px solid #232946;
+    border-radius: 6px;
+}
+/*ACÁ VAN A IR LAS ANIMACIONES*/
 .cuestionario{
     /*Dimensiones*/
     width: auto;
