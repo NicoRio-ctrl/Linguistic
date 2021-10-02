@@ -286,26 +286,65 @@
     z-index: 3;
 }
 .gram-vocab-writt .contenido .input-contenedor-temas #tipo{
-    color: #232946;
+    /*Dimensiones*/
+    width: 70%;
+    height: 57.5%;
 
+    /*Colores*/
+    color: #232946;
+    background-color: transparent;
+
+    /*Bordes*/
     border: 2px solid #232946;
     border-radius: 6px;
-
-    background-color: transparent;
 
     /*Fuente*/
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     font-size: 24px;
 
-    width: 70%;
-    height: 57.5%;
-
+    /*Margenes*/
     margin-bottom: 1.8%;
 
+    /*Otros*/
     text-indent: 3%;
-
     outline: none;
+    cursor: pointer;
+    z-index: 3;
+
+    /*Flecha de la derecha*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(/iconos/sort-down-solid.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: right 3% top 1px;
+}
+/*FALTA MODIFICAR EL OPTION DEL SELECT*/
+.gram-vocab-writt .contenido .input-contenedor-temas #tipo:hover{
+    /*Colores*/
+    background-color: #232946;
+    color: #b8c1ec;
+
+    /*Bordes*/
+    border: 2px solid #232946;
+
+    /*Flecha de la derecha*/
+    background-image: url(/iconos/sort-down-solid2.png);
+
+    /*Otros*/
+    transition: 0.2s;
+}
+.gram-vocab-writt .contenido .input-contenedor-temas #tipo:hover:active{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Flecha de la derecha*/
+    background-image: url(/iconos/sort-down-solid3.png);
+
+    /*Otros*/
+    transition: 0s;
 }
 .gram-vocab-writt .contenido input[type="button"]{
     /*Dimensiones*/
@@ -324,8 +363,30 @@
     /*Bordes*/
     border: 2px solid #232946;
     border-radius: 6px;
+
+    /*Otros*/
+    cursor: pointer;
+    z-index: 3;
 }
-/*ACÁ VAN A IR LAS ANIMACIONES*/
+.gram-vocab-writt .contenido input[type="button"]:hover{
+    /*Colores*/
+    background-color: #232946;
+    color: #b8c1ec;
+
+    /*Bordes*/
+    border: 2px solid #232946;
+
+    /*Otros*/
+    transition: 0.2s;
+
+}
+.gram-vocab-writt .contenido input[type="button"]:hover:active{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Otros*/
+    transition: 0s;
+}
 .cuestionario{
     /*Dimensiones*/
     width: auto;
@@ -517,3 +578,4 @@
     /*Colores*/
     background-color: #eebbc3;
 }
+/*FALTAN MODIFICAR LOS CHECKBOX Y RADIO BUTTON*/
