@@ -419,9 +419,6 @@
 
     /*Posicionamiento*/
     text-align: center;
-
-    /*Margenes*/
-    margin-top: 0%;
 }
 .cuestionario div{
     /*Dimensiones*/
@@ -570,12 +567,136 @@
     /*Animación*/
     transition: 0s;
 }
+/*FALTAN MODIFICAR LOS CHECKBOX Y RADIO BUTTON*/
 .nosotros{
     /*Dimensiones*/
     width: auto;
-    height: 90%;
+    height: 85%;
 
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    
     /*Colores*/
     background-color: #eebbc3;
+
+    /*Margenes*/
+    padding: 3.25% 0% 3.25% 0%;
+
+    /*Otros*/
+    z-index: 1;
 }
-/*FALTAN MODIFICAR LOS CHECKBOX Y RADIO BUTTON*/
+.nosotros h1{
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Posicionamiento*/
+    text-align: center;
+}
+.nosotros .descripcion{
+    /*Dimensiones*/
+    width: 52.5%;
+    height: auto;
+
+    /*Display*/
+    margin-right: auto;
+    margin-left: auto;
+}
+.nosotros p{
+    /*Display*/
+    text-align: center;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+
+    /*Color*/
+    color: #232946;
+
+    /*Otros*/
+    z-index: 2;
+}
+.nosotros .superior{
+    /*Dimensiones*/
+    width: auto;
+    height: 45%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.nosotros .inferior{
+    /*Dimensiones*/
+    width: auto;
+    height: 45%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.nosotros .superior .usuario-temas, .nosotros .inferior .usuario-temas{
+    /*Dimensiones*/
+    width: 23%;
+    height: 80%;
+
+    /*Colores*/
+    background-color: #fffffe;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /*Margenes*/
+    margin: 1.25% 1.25% 1.25% 1.25%;
+
+    /*Bordes*/
+    border-radius: 6px;
+
+    /*Otros*/
+    z-index: 2;
+}
+.nosotros .superior .usuario-temas h2, .nosotros .inferior .usuario-temas h2{
+    /*Display*/
+    text-align: center;
+    margin-bottom: -20%;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 52px;
+
+    /*Otros*/
+    z-index: 3;
+}
+.nosotros .superior .usuario-temas p, .nosotros .inferior .usuario-temas p{
+    /*Display*/
+    text-align: center;
+
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+
+    /*Otros*/
+    z-index: 3;
+}
