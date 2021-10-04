@@ -1,0 +1,120 @@
+*{
+    /*General*/
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Colores*/
+    background-color: #232946;
+
+    /*Otros*/
+    z-index: 1;
+}
+.registro{
+    /*Dimensiones*/
+    width: 30%;
+    height: 80%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*Colores*/
+    background-color: #fffffe;
+
+    /*Bordes*/
+    border-radius: 6px;
+    
+    /*Otros*/
+    z-index: 2;
+}
+h1{
+    /*Colores*/
+    color: #232946;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+
+    margin: 12% 0% 0% 0%;
+
+    /*Otros*/
+    z-index: 3;
+}
+.cont-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+.inputs, .boton{
+    width: 55%;
+    height: 11%;
+
+    border-radius: 6px;
+    border: 2px solid #232946;
+
+    margin: 1% 0% 1% 0%;
+}
+.inputs{
+    text-indent: 5%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+
+    color: #232946;
+}
+::placeholder{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+
+    /*Color*/
+    color: #232946;
+
+    text-indent: 5%;
+}
+.boton{
+    background-color: #232946;
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+
+    margin-top: 5%;
+}
+p{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+    /*Color*/
+    color: #232946;
+}
+a{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+
+    /*Color*/
+    color: #d4939d;
+
+    text-decoration: none;
+}
