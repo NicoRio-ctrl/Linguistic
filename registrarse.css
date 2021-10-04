@@ -10,14 +10,14 @@ body{
     align-items: center;
 
     /*Colores*/
-    background-color: #232946;
+    background-color: #121629;
 
     /*Otros*/
     z-index: 1;
 }
 .registro{
     /*Dimensiones*/
-    width: 30%;
+    width: 35%;
     height: 80%;
 
     /*Display*/
@@ -26,7 +26,7 @@ body{
     align-items: center;
 
     /*Colores*/
-    background-color: #fffffe;
+    background-color: #232946;
 
     /*Bordes*/
     border-radius: 6px;
@@ -36,14 +36,14 @@ body{
 }
 h1{
     /*Colores*/
-    color: #232946;
+    color: #fffffe;
 
     /*Fuente*/
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     font-size: 70px;
 
-    margin: 12% 0% 0% 0%;
+    margin: 10% 0% 0% 0%;
 
     /*Otros*/
     z-index: 3;
@@ -59,11 +59,12 @@ h1{
 
 }
 .inputs, .boton{
-    width: 55%;
-    height: 11%;
+    width: 60%;
+    height: 12.5%;
 
     border-radius: 6px;
-    border: 2px solid #232946;
+    border: 1px solid #b8c1ec;
+    background-color: transparent;
 
     margin: 1% 0% 1% 0%;
 }
@@ -71,50 +72,76 @@ h1{
     text-indent: 5%;
 
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 300;
+    font-size: 20px;
 
-    color: #232946;
+    color: #b8c1ec;
+
+    outline: none;
 }
 ::placeholder{
     /*Fuente*/
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 300;
+    font-size: 20px;
 
     /*Color*/
-    color: #232946;
+    color: #b8c1ec;
 
     text-indent: 5%;
 }
 .boton{
-    background-color: #232946;
-    color: #b8c1ec;
+    background-color: #eebbc3;
+    color: #232946;
+    border: 2px solid #eebbc3;
 
     /*Fuente*/
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
 
-    margin-top: 5%;
+    cursor: pointer;
+
+    margin-top: 1%;
+}
+.boton:hover{
+    color: #fffffe;
+
+    transition: 0.2s;
+}
+.boton:hover:active{
+    color: #232946;
+
+    transition: 0.2s;
+}
+.cont-inputs div{
+    width: 60%;
+
+    text-align: left;
 }
 p{
     /*Fuente*/
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: 300;
+    font-size: 22px;
 
     /*Color*/
-    color: #232946;
+    color: #b8c1ec;
 }
 a{
     /*Fuente*/
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 22px;
 
     /*Color*/
     color: #d4939d;
 
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:hover:active{
     text-decoration: none;
 }

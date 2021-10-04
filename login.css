@@ -1,0 +1,147 @@
+*{
+    /*General*/
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Colores*/
+    background-color: #121629;
+
+    /*Otros*/
+    z-index: 1;
+}
+.login{
+    /*Dimensiones*/
+    width: 35%;
+    height: 70%;
+
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*Colores*/
+    background-color: #232946;
+
+    /*Bordes*/
+    border-radius: 6px;
+    
+    /*Otros*/
+    z-index: 2;
+}
+h1{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+
+    margin: 10% 0% 0% 0%;
+
+    /*Otros*/
+    z-index: 3;
+}
+.cont-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+.inputs, .boton{
+    width: 60%;
+    height: 15%;
+
+    border-radius: 6px;
+    border: 1px solid #b8c1ec;
+    background-color: transparent;
+
+    margin: 1% 0% 1% 0%;
+}
+.inputs{
+    text-indent: 5%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
+    color: #b8c1ec;
+
+    outline: none;
+}
+::placeholder{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
+    /*Color*/
+    color: #b8c1ec;
+
+    text-indent: 5%;
+}
+.boton{
+    background-color: #eebbc3;
+    color: #232946;
+    border: 2px solid #eebbc3;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    margin-top: 1%;
+}
+.boton:hover{
+    color: #fffffe;
+
+    transition: 0.2s;
+}
+.boton:hover:active{
+    color: #232946;
+
+    transition: 0.2s;
+}
+.cont-inputs div{
+    width: 60%;
+
+    text-align: left;
+}
+p{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+
+    /*Color*/
+    color: #b8c1ec;
+}
+a{
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+
+    /*Color*/
+    color: #d4939d;
+
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:hover:active{
+    text-decoration: none;
+}
