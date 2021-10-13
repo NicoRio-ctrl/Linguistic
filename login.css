@@ -59,8 +59,8 @@ h1{
 
 }
 .inputs, .boton{
-    width: 60%;
-    height: 15%;
+    width: 55%;
+    height: 13.6%;
 
     border-radius: 6px;
     border: 1px solid #b8c1ec;
@@ -124,6 +124,9 @@ p{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 22px;
+
+    /*Otros*/
+    text-indent: 3.5%;
 
     /*Color*/
     color: #b8c1ec;
