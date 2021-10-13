@@ -51,7 +51,7 @@
                 }else{
                     echo 'Usuario';
                 }
-                ?>&nbsp;&nbsp;&nbsp;<a href="login.php"><i class="fas fa-sign-in-alt" id="logout-logo" href="login.php"></i></a></p>
+                ?></p><p><a href="login.php"><i class="fas fa-sign-in-alt" id="logout-logo" href="login.php"></i></a></p>
                 
             </div>
 
