@@ -9,19 +9,59 @@
         <title>Linguistic | Inicio</title>
     </head>
     <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
+
+        <?php
+            session_start();
+        ?>
+
         <nav class="options">
 
-            <div class="user">
-                <i class="fas fa-user-circle" id="user-logo"></i><p href="#">Usuario</p>
+            <div class="user" id="enlace1">
+                <i class="fas fa-user-circle" id="user-logo"></i><p><?php 
+                if(isset($_SESSION['nombre'])){
+                    echo $_SESSION['nombre'];
+                }else{
+                    echo 'Usuario';
+                }
+                ?>&nbsp;&nbsp;&nbsp;<a href="login.php"><i class="fas fa-sign-in-alt" id="logout-logo" href="login.php"></i></a></p>
+                
             </div>
 
             <div class="nav">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Gramática</a>
-                <a href="#">Vocabulario</a>
-                <a href="#">Escritos</a>
-                <a href="#">Cuestionario</a>
+                <a href="#enlace1">Inicio</a>
+                <a href="#enlace2">Información</a>
+                <a href="#enlace3">Gramática</a>
+                <a href="#enlace3">Vocabulario</a>
+                <a href="#enlace3">Escritos</a>
+                <a href="#enlace4">Cuestionario</a>
             </div>
             
         </nav>
@@ -39,7 +79,7 @@
 
         </nav>
 
-        <div class="gram-vocab-writt">
+        <div class="gram-vocab-writt" id="enlace3">
 
             <h1>Aprendizaje</h1>
             <p>¡Selecciona el tópico que desees o pierdete por el camino del saber!</p>
@@ -125,7 +165,7 @@
             
         </div>
 
-        <div class="cuestionario">
+        <div class="cuestionario" id="enlace4">
 
             <h1>Un momento...</h1>
             <div>
@@ -196,7 +236,7 @@
             
         </div>
 
-        <div class="nosotros">
+        <div class="nosotros" id="enlace2">
 
             <h1>Estadísticas</h1>
             <div class="descripcion">

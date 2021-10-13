@@ -34,16 +34,7 @@
     color: #232946;
 
     /*Otros*/
-    cursor: pointer;
     z-index: 1;
-}
-.options .user p:hover{
-    /*Otros*/
-    text-decoration: underline;
-}
-.options .user p:active{
-    /*Otros*/
-    text-decoration: none;
 }
 .options .user i{
     /*Tamaño*/
@@ -56,6 +47,10 @@
     margin-top: 1%;
     z-index: 1;
 }
+
+
+
+
 .options .nav{
     /*Dimensiones*/
     width: auto;
