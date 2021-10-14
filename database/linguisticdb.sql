@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 19:10:24
+-- Tiempo de generación: 14-10-2021 a las 19:48:59
 -- Versión del servidor: 5.7.18-log
 -- Versión de PHP: 8.0.8
 
@@ -154,7 +154,9 @@ INSERT INTO `contenido` (`topico`, `tema`, `ejemploespanol`, `ejemploingles`) VA
 ('Vocabulario', 'Ciencia', 'Microbiologia', 'Microbiology'),
 ('Vocabulario', 'Ciencia', 'Meteorologia', 'Meteorology'),
 ('Vocabulario', 'Ciencia', 'Paleontologia', 'Paleontology'),
-('Vocabulario', 'Ciencia', 'Zoologia', 'Zoology');
+('Vocabulario', 'Ciencia', 'Zoologia', 'Zoology'),
+('Gramatica', 'Gerundios', 'Un gerundio es un verbo con sufijo \"-ing\" que actua como un sustantivo.', 'Example: He likes her singing.'),
+('Gramatica', 'Infinitivos', 'El uso del infinitivo varia dependiendo del contexto, y por lo tanto es dificl traducirlo directamente. Sin embargo, la estructura siempre se mantiene igual.', 'to + (Verbo)');
 
 -- --------------------------------------------------------
 
