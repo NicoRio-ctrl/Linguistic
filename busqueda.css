@@ -1,4 +1,5 @@
 *{
+    /*Generales*/
     padding: 0%;
     margin: 0%;
 }
@@ -7,6 +8,48 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+h1{
+    /*Colores*/
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+
+    margin: 5% 0% 0% 0%;
+
+    /*Otros*/
+    z-index: 3;
+}
+.descripcion{
+    /*Dimensiones*/
+    width: 52.5%;
+
+    /*Display*/
+    text-align: center;
+
+    /*Margenes*/
+    margin: 0% 0% 1% 0%;
+}
+.descripcion p{
+    /*Colores*/
+    color: #b8c1ec;
+
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+    /*Otros*/
+    z-index: 2;
+
+    /*Margenes*/
+    margin: 1% 4% 0% 0.4%;
+
+    /*Otros*/
+    z-index: 1;
 }
 .contenedor{
     width: 80%;
@@ -19,7 +62,16 @@ body{
 }
 .resultados{
     width: 100%;
-    height: 80%;
+    height: auto;
 
     background-color: #fffffe;
+
+    border-radius: 6px;
+
+    
 }
+button{
+    width: 10%;
+    height: 10%;
+}
+

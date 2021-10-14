@@ -12,30 +12,30 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-        $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
+            $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
 
-            // Store hash
-            var hash = this.hash;
+                // Store hash
+                var hash = this.hash;
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
 
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                } // End if
             });
-            } // End if
-        });
-        });
+            });
         </script>
 
         <?php
@@ -91,22 +91,22 @@
                     <center>
                         <div class="input-contenedor-temas">
                             <form method="POST" action="busqueda.php">
-                                <select class="input" name="vocabulario" id="tipo">
+                                <select class="input" name="tema" id="tipo" required>
                                     <option selected="select" id="none">Tema</option>
-                                    <option value="1"id="Clima">Ciencia</option>
-                                    <option value="2"id="Deportes">Clima</option>
-                                    <option value="3"id="Vacaciones">Deportes</option>
-                                    <option value="4"id="Viajes">Edad</option>
-                                    <option value="5"id="Tiempo">Habitaciones</option>
-                                    <option value="6"id="Edad">Tiempo</option>
-                                    <option value="7"id="Sentidos">Trabajo</option>
-                                    <option value="8"id="Habitaciones">Sentidos</option>
-                                    <option value="9"id="Trabajo">Viajes</option>
-                                    <option value="10"id="Ciencia">Vacaciones</option>
+                                    <option value="Ciencia"id="Ciencia">Ciencia</option>
+                                    <option value="Clima"id="Clima">Clima</option>
+                                    <option value="Deportes"id="Deportes">Deportes</option>
+                                    <option value="Edad"id="Edad">Edad</option>
+                                    <option value="Habitaciones"id="Habitaciones">Habitaciones</option>
+                                    <option value="Salud"id="Salud">Salud</option>
+                                    <option value="Sentidos"id="Sentidos">Sentidos</option>
+                                    <option value="Tiempo"id="Tiempo">Tiempo</option>
+                                    <option value="Trabajo"id="Trabajo">Trabajo</option>
+                                    <option value="Viajes"id="Viajes">Viajes</option>
                                 </select>
                         </div>
-                            <input type="submit" name="vocabulario" value="Buscar">&nbsp;
-                            <input type="submit" name="vocabulario" value="Aleatorio">
+                            <button type="submit" name="buscar" value="Vocabulario">Buscar</button>&nbsp;
+                            <button type="submit" name="aleatorio" value="Vocabulario">Aleatorio</button>
                         </form>
                     </center>
                 </div>
@@ -119,22 +119,21 @@
                         <div class="input-contenedor-temas">
 
                             <form method="POST" action="busqueda.php">
-                            <select class="input" name="gramatica" id="tipo">
+                            <select class="input" name="tema" id="tipo">
                                 <option selected="select" id="none">Tema</option>
-                                <option value="1"id="Presente-Simple">Presente Simple</option>
-                                <option value="2"id="Pasado-Simple">Pasado Simple</option>
-                                <option value="3"id="Comparaciones">Comparaciones</option>
-                                <option value="4"id="Verbos-Modales">Verbos Modales</option>
-                                <option value="5"id="Cláusulas-Relativas">Cláusulas Relativas</option>
-                                <option value="6"id="Gerundios">Gerundios</option>
-                                <option value="7"id="Infinitivos">Infinitivos</option>
-                                <option value="8"id="Habla-Indirecta">Habla Indirecta</option>
-                                <option value="9"id="Contables">Contables</option>
-                                <option value="10"id="Incontables">Incontables</option>
+                                <option value="Clausulas relativas"id="Clausulas relativas">Cláusulas relativas</option>
+                                <option value="Comparacion"id="Comparacion">Comparaciones</option>
+                                <option value="Contables"id="Contables">Contables</option>
+                                <option value="Gerundios"id="Gerundios">Gerundios</option>
+                                <option value="Incontables"id="Incontables">Incontables</option>
+                                <option value="Infinitivos"id="Infinitivos">Infinitivos</option>
+                                <option value="Pasado"id="Pasado">Pasado</option>
+                                <option value="Presente"id="Presente">Presente</option>
+                                <option value="Verbos modales"id="Verbos modales">Verbos modales</option>
                             </select>
                         </div>
-                            <input type="submit" name="gramatica" value="Buscar">&nbsp;
-                            <input type="submit" name="gramatica" value="Aleatorio">
+                            <button type="submit" name="buscar" value="Gramatica">Buscar</button>&nbsp;
+                            <button type="submit" name="aleatorio" value="Gramatica">Aleatorio</button>
                         </form>
                     </center>
                 </div>
@@ -147,17 +146,17 @@
                         <div class="input-contenedor-temas">
 
                             <form method="POST" action="busqueda.php">
-                            <select class="input" name="escritos" id="tipo">
+                            <select class="input" name="tema" id="tipo">
                                 <option selected="select" id="none">Tema</option>
-                                <option value="1"id="Ensayo">Ensayo</option>
-                                <option value="2"id="Artículo">Articulo</option>
-                                <option value="3"id="Reseña">Reseña</option>
-                                <option value="4"id="Carta">Carta</option>
-                                <option value="5"id="Reporte">Reporte</option>
+                                <option value="Ensayo"id="Ensayo">Ensayo</option>
+                                <option value="Articulo"id="Articulo">Articulo</option>
+                                <option value="Resenia"id="Resenia">Reseña</option>
+                                <option value="Carta"id="Carta">Carta</option>
+                                <option value="Reporte"id="Reporte">Reporte</option>
                             </select>
                         </div>
-                            <input type="submit" name="escritos" value="Buscar">&nbsp;
-                            <input type="submit" name="escritos" value="Aleatorio">
+                            <button type="submit" name="buscar" value="Escrito">Buscar</button>&nbsp;
+                            <button type="submit" name="aleatorio" value="Escrito">Aleatorio</button>
                         </form>
                     </center>
                 </div>

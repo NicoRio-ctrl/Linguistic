@@ -47,10 +47,6 @@
     margin-top: 1%;
     z-index: 1;
 }
-
-
-
-
 .options .nav{
     /*Dimensiones*/
     width: auto;
@@ -341,7 +337,7 @@
     /*Otros*/
     transition: 0s;
 }
-.gram-vocab-writt .contenido input[type="submit"]{
+.gram-vocab-writt .contenido button[type="submit"]{
     /*Dimensiones*/
     width: 34%;
     height: 57.5%;
@@ -363,7 +359,7 @@
     cursor: pointer;
     z-index: 3;
 }
-.gram-vocab-writt .contenido input[type="submit"]:hover{
+.gram-vocab-writt .contenido button[type="submit"]:hover{
     /*Colores*/
     background-color: #232946;
     color: #b8c1ec;
@@ -375,7 +371,7 @@
     transition: 0.2s;
 
 }
-.gram-vocab-writt .contenido input[type="submit"]:hover:active{
+.gram-vocab-writt .contenido button[type="submit"]:hover:active{
     /*Colores*/
     color: #fffffe;
 
