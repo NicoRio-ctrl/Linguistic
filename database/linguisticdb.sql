@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 19:48:59
+-- Tiempo de generación: 14-10-2021 a las 20:31:36
 -- Versión del servidor: 5.7.18-log
 -- Versión de PHP: 8.0.8
 
@@ -156,7 +156,14 @@ INSERT INTO `contenido` (`topico`, `tema`, `ejemploespanol`, `ejemploingles`) VA
 ('Vocabulario', 'Ciencia', 'Paleontologia', 'Paleontology'),
 ('Vocabulario', 'Ciencia', 'Zoologia', 'Zoology'),
 ('Gramatica', 'Gerundios', 'Un gerundio es un verbo con sufijo \"-ing\" que actua como un sustantivo.', 'Example: He likes her singing.'),
-('Gramatica', 'Infinitivos', 'El uso del infinitivo varia dependiendo del contexto, y por lo tanto es dificl traducirlo directamente. Sin embargo, la estructura siempre se mantiene igual.', 'to + (Verbo)');
+('Gramatica', 'Infinitivos', 'El uso del infinitivo varia dependiendo del contexto, y por lo tanto es dificl traducirlo directamente. Sin embargo, la estructura siempre se mantiene igual.', 'to + (Verbo)'),
+('Gramatica', 'Clausulas relativas', 'Quien', 'Who'),
+('Gramatica', 'Clausulas relativas', 'Cual', 'Which'),
+('Gramatica', 'Clausulas relativas', 'Donde', 'Where'),
+('Gramatica', 'Clausulas relativas', 'Cuando', 'When'),
+('Gramatica', 'Clausulas relativas', 'Cuyo', 'Whose'),
+('Gramatica', 'Contables', 'Los sustantivos contables son aquellos a los que se puede referir como individual o plural.', 'Example: She likes apples. / She wants an apple.'),
+('Gramatica', 'Incontables', 'Los sustantivos incontables son aquellos que no se pueden contar con numeros pero si mediante el uso de cuantificadores.', 'Example: She would like some food.');
 
 -- --------------------------------------------------------
 
