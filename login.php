@@ -16,7 +16,7 @@
         session_destroy();
       }
       function connectDB(){
-          $enlace = mysqli_connect("localhost","root","","linguisticdb");
+          $enlace = mysqli_connect("localhost","root","lab02","linguisticdb");
           return $enlace; 
       }
 
@@ -32,11 +32,11 @@
         while($row = mysqli_fetch_array($result)) 
         { 
             $usuario=$row['correo'];
-            $nombre=$row['nombre'];
             //$ct=password_verify($contra, $row['password']);
             $ct=$row['contrasena'];
             if($usuario == $nombre && $contra == $ct){
                 session_start();
+                $nombre=$row['nombre'];
                 $_SESSION['usuario'] = $usuario;
                 $_SESSION['nombre'] = $nombre;
                 header('Location: index.php');
