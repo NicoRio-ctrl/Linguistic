@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2021 a las 16:16:59
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.11
+-- Tiempo de generación: 14-10-2021 a las 19:10:24
+-- Versión del servidor: 5.7.18-log
+-- Versión de PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -114,7 +114,47 @@ INSERT INTO `contenido` (`topico`, `tema`, `ejemploespanol`, `ejemploingles`) VA
 ('Escrito', 'Articulo', 'Un articulo tiene el fin de entretener al lector mediante la diseccion de un topico con el que el escritor este familiarizado, con el fin de aprovechar la oportunidad para recomendar (o no) dicho topico. A un nivel academico, la estructura es muy similar a la del ensayo.', ' '),
 ('Escrito', 'Resenia', 'Un resenia es similar al articulo en el sentido de que se enfoca en un topico en particular y le da a saber al lector si es recomendable o no. Sin embargo, en la resenia no es necesario mantener un nivel de formalidad muy alto porque el escritor debe entrar mas en detalle sobre sus opiniones personales sobre el topico en cuestion.', ' '),
 ('Escrito', 'Carta', 'Una carta es probablemente el formato de escrito mas personal, puesto que el escritor le esta escribiendo directamente a otra persona. Mientras que es necesario respetar el orden de los parrafos como en los escritos previos, es posible utilizar un vocabulario mucho mas casual en comparacion a aquellos.', ' '),
-('Escrito', 'Reporte', 'Un reporte busca informar al lector sobre un evento en particular, y por lo tanto, se debe mantener un tono sumamente formal y se deben evitar reflexiones personales, dado que la objetividad es la parte mas importante.', ' ');
+('Escrito', 'Reporte', 'Un reporte busca informar al lector sobre un evento en particular, y por lo tanto, se debe mantener un tono sumamente formal y se deben evitar reflexiones personales, dado que la objetividad es la parte mas importante.', ' '),
+('Vocabulario', 'Edad', 'Adolescente', 'Adolescent'),
+('Vocabulario', 'Edad', 'Adolescencia', 'Adolescence'),
+('Vocabulario', 'Edad', 'Joven', 'Teenager'),
+('Vocabulario', 'Edad', 'Juventud', 'Youth'),
+('Vocabulario', 'Edad', 'Adulto', 'Adult'),
+('Vocabulario', 'Edad', 'Adultez', 'Adulthood'),
+('Vocabulario', 'Edad', 'Edad media', 'Middle age'),
+('Vocabulario', 'Edad', 'Anciano', 'Elderly'),
+('Vocabulario', 'Edad', 'Vejez', 'Old age'),
+('Vocabulario', 'Edad', 'Edad', 'Age'),
+('Vocabulario', 'Sentidos', 'Vista', 'Sight'),
+('Vocabulario', 'Sentidos', 'Oido', 'Hearing'),
+('Vocabulario', 'Sentidos', 'Olfato', 'Smell'),
+('Vocabulario', 'Sentidos', 'Gusto', 'Taste'),
+('Vocabulario', 'Sentidos', 'Tacto', 'Touch'),
+('Vocabulario', 'Habitaciones', 'Atico', 'Attic'),
+('Vocabulario', 'Habitaciones', 'Cuarto', 'Bedroom'),
+('Vocabulario', 'Habitaciones', 'Cocina', 'Kitchen'),
+('Vocabulario', 'Habitaciones', 'Comedor', 'Dining room'),
+('Vocabulario', 'Habitaciones', 'Sala de estar', 'Living room'),
+('Vocabulario', 'Trabajo', 'Empleado', 'Employee'),
+('Vocabulario', 'Trabajo', 'Empleador', 'Employer'),
+('Vocabulario', 'Trabajo', 'Empleo', 'Job'),
+('Vocabulario', 'Trabajo', 'Ocupacion', 'Occupation'),
+('Vocabulario', 'Trabajo', 'Profesion', 'Profession'),
+('Vocabulario', 'Trabajo', 'Trabajador', 'Worker'),
+('Vocabulario', 'Trabajo', 'Jornada completa', 'Full-time'),
+('Vocabulario', 'Trabajo', 'Jornada parcial', 'Part-time'),
+('Vocabulario', 'Trabajo', 'Desempleo', 'Unemployment'),
+('Vocabulario', 'Trabajo', 'Vacante', 'Vacancy'),
+('Vocabulario', 'Ciencia', 'Astronomia', 'Astronomy'),
+('Vocabulario', 'Ciencia', 'Bioquimica', 'Biochemistry'),
+('Vocabulario', 'Ciencia', 'Biologia', 'Biology'),
+('Vocabulario', 'Ciencia', 'Quimica', 'Chemistry'),
+('Vocabulario', 'Ciencia', 'Geologia', 'Geology'),
+('Vocabulario', 'Ciencia', 'Inmunologia', 'Immunology'),
+('Vocabulario', 'Ciencia', 'Microbiologia', 'Microbiology'),
+('Vocabulario', 'Ciencia', 'Meteorologia', 'Meteorology'),
+('Vocabulario', 'Ciencia', 'Paleontologia', 'Paleontology'),
+('Vocabulario', 'Ciencia', 'Zoologia', 'Zoology');
 
 -- --------------------------------------------------------
 
@@ -125,7 +165,12 @@ INSERT INTO `contenido` (`topico`, `tema`, `ejemploespanol`, `ejemploingles`) VA
 CREATE TABLE `usuarios` (
   `nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `contrasena` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `correo` varchar(40) COLLATE utf8_spanish2_ci NOT NULL
+  `correo` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
+  `otros_idiomas` tinyint(1) DEFAULT NULL,
+  `nivel_idioma` int(11) DEFAULT NULL,
+  `examen` char(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `lugar_estudio` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `tiempo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
