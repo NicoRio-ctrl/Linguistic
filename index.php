@@ -102,7 +102,7 @@
                                     <option value="Sentidos"id="Sentidos">Sentidos</option>
                                     <option value="Tiempo"id="Tiempo">Tiempo</option>
                                     <option value="Trabajo"id="Trabajo">Trabajo</option>
-                                    <option value="Viajes"id="Viajes">Viajes</option>
+                                    <option value="Viaje"id="Viajes">Viajes</option>
                                 </select>
                         </div>
                             <button type="submit" name="buscar" value="Vocabulario">Buscar</button>&nbsp;
@@ -172,67 +172,81 @@
                 Por tal motivo, te pedimos, amablemente, que te detengas unos minutos para responder una 
                 breve encuesta que contribuirá al desarrollo de la página.</p>
             </div>
-            
-            <div class="preguntas">
 
-                <div class="pre-izquierda">
-                    <h2>¿Cuántos años llevas estudiando?</h2>
-                    <ul>
-                        <li type="none"><label><input type="radio" name="años">&nbsp;No estudio inglés</label></li>
-                        <li type="none"><label><input type="radio" name="años">&nbsp;Menos de un año</label></li>
-                        <li type="none"><label><input type="radio" name="años">&nbsp;De uno a tres años</label></li>
-                        <li type="none"><label><input type="radio" name="años">&nbsp;De tres a seis años</label></li>
-                        <li type="none"><label><input type="radio" name="años">&nbsp;Más de seis años</label></li>
-                    </ul>
-                    <br>
-                    <br>
+            <form method="POST" action="formulario.php">
+                <center><div class="preguntas">
 
-                    <h2>Consideras que tienes un conocimiento del idioma...</h2>
-                    <ul>
-                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Básico</label></li>
-                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Intermedio</label></li>
-                        <li type="none"><label><input type="radio" name="nivel">&nbsp;Avanzado</label></li>
-                    </ul>
-                    <br>
-                    <br>
+                    <div class="pre-izquierda">
+                        <h2>¿Cuántos años llevas estudiando?</h2>
+                        <ul>
+                            <li type="none"><label><input type="radio" name="anios" value="No estudio inglés">&nbsp;No estudio inglés</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="Menos de un año">&nbsp;Menos de un año</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="De uno a tres años">&nbsp;De uno a tres años</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="De tres a seis años">&nbsp;De tres a seis años</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="Más de seis años">&nbsp;Más de seis años</label></li>
+                        </ul>
+                        <br>
+                        <br>
 
-                    <h2>¿Dónde estudias?</h2>
-                    <ul>
-                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En el colegio</label></li>
-                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En un instituto</label></li>
-                        <li type="none"><label><input type="radio" name="ingles">&nbsp;En casa (Autodidacta)</label></li>
-                        <li type="none"><label><input type="radio" name="ingles">&nbsp;No estudio en ningún lugar</label></li>
-                        <li type="none"><label><input type="radio" name="ingles">&nbsp;Otro</label></li>
-                    </ul>
-                </div>
-                
-                <div class="pre-derecha">
-                    <h2>¿Cuáles de los siguientes exámenes rendiste?</h2>
-                    <ul>
-                        <li type="none"><label><input type="checkbox">&nbsp;Certificate of Proficiency in English (CPE)</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;Certificate in Advance English (CAE)</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;First Certificate English (FCE)</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;Preliminary English Test (PET)</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;Key English Test (KET)</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;No rendí ningún exámen</label></li>
-                        <li type="none"><label><input type="checkbox">&nbsp;Otro</label></li>
-                    </ul>
+                        <h2>Consideras que tienes un conocimiento del idioma...</h2>
+                        <ul>
+                            <li type="none"><label><input type="radio" name="nivel" value="Básico">&nbsp;Básico</label></li>
+                            <li type="none"><label><input type="radio" name="nivel" value="Intermedio">&nbsp;Intermedio</label></li>
+                            <li type="none"><label><input type="radio" name="nivel" value="Avanzado">&nbsp;Avanzado</label></li>
+                        </ul>
+                        <br>
+                        <br>
+
+                        <h2>¿Dónde estudias?</h2>
+                        <ul>
+                            <li type="none"><label><input type="radio" name="lugar" value="En el colegio">&nbsp;En el colegio</label></li>
+                            <li type="none"><label><input type="radio" name="lugar" value="En un instituto">&nbsp;En un instituto</label></li>
+                            <li type="none"><label><input type="radio" name="lugar" value="En casa (Autodidacta)">&nbsp;En casa (Autodidacta)</label></li>
+                            <li type="none"><label><input type="radio" name="lugar" value="No estudio en ningún lugar">&nbsp;No estudio en ningún lugar</label></li>
+                            <li type="none"><label><input type="radio" name="lugar" value="Otro">&nbsp;Otro</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="pre-derecha">
+                        <h2>¿Cuáles de los siguientes exámenes rendiste?</h2>
+                        <ul>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="CPE">&nbsp;Certificate of Proficiency in English (CPE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="CAE">&nbsp;Certificate in Advance English (CAE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="FCE">&nbsp;First Certificate English (FCE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="PET">&nbsp;Preliminary English Test (PET)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="KET">&nbsp;Key English Test (KET)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="No">&nbsp;No rendí ningún exámen</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes" value="Otro">&nbsp;Otro</label></li>
+                        </ul>
+                        <br>
+                        <br>
+
+                        <h2>Además del inglés y/o tu lengua materna, ¿Manejas otros idiomas?</h2>
+                        <ul>
+                            <li type="none"><label><input type="radio" name="otros_i" value="1">&nbsp;Sí</label></li>
+                            <li type="none"><label><input type="radio" name="otros_i" value="0">&nbsp;No</label></li>
+                        </ul>
+                    </div>
+
+                    </div>
+
                     <br>
                     <br>
-               
-                    <h2>Además del inglés y/o tu lengua materna, ¿Manejas otros idiomas?</h2>
-                    <ul>
-                        <li type="none"><label><input type="radio" name="otro">&nbsp;Sí</label></li>
-                        <li type="none"><label><input type="radio" name="otro">&nbsp;No</label></li>
-                    </ul>
-                </div>
-            
-            </div>
-            
-            <br>
-            <br>
-            <input type="button" value="Enviar">
-            
+                    <?php 
+                        if(isset($_SESSION['usuario'])){
+                    ?>
+                        <input type="submit" value="Enviar" class="boton-cuestionario">
+                    <?php
+                        }else{
+                    ?>
+                        <input type="submit" value="Enviar" class="boton-cuestionario2" disabled>
+                    <?php
+                        }
+                    ?>
+                    
+                </div></center>
+            </form>
+           
         </div>
 
         <div class="nosotros" id="enlace2">
@@ -247,17 +261,23 @@
 
                 <div class="usuario-temas">
                     <h2>Usuarios</h2>
-                    <p>00</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Nivel</h2>
-                    <p>Example</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Estudiando...</h2>
-                    <p>Example</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
 
             </div>
@@ -266,17 +286,23 @@
 
                 <div class="usuario-temas">
                     <h2>Definiciones</h2>
-                    <p>000</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
 
                 <div class="usuario-temas">
                     <h2>Temas</h2>
-                    <p>00</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
 
                 <div class="usuario-temas">
                     <h2>Textos</h2>
-                    <p>0</p>
+                    <p><?php
+                        
+                    ?></p>
                 </div>
 
             </div>

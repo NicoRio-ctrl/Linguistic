@@ -16,7 +16,7 @@
         session_destroy();
       }
       function connectDB(){
-          $enlace = mysqli_connect("localhost","root","lab02","linguisticdb");
+          $enlace = mysqli_connect("localhost","root","","linguisticdb");
           return $enlace; 
       }
 

@@ -302,15 +302,6 @@
     outline: none;
     cursor: pointer;
     z-index: 3;
-
-    /*Flecha de la derecha*/
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(/iconos/sort-down-solid.png);
-    background-repeat: no-repeat;
-    background-size: 18px;
-    background-position: right 3% top 1px;
 }
 /*FALTA MODIFICAR EL OPTION DEL SELECT*/
 .gram-vocab-writt .contenido .input-contenedor-temas #tipo:hover{
@@ -321,18 +312,12 @@
     /*Bordes*/
     border: 2px solid #232946;
 
-    /*Flecha de la derecha*/
-    background-image: url(/iconos/sort-down-solid2.png);
-
     /*Otros*/
     transition: 0.2s;
 }
 .gram-vocab-writt .contenido .input-contenedor-temas #tipo:hover:active{
     /*Colores*/
     color: #fffffe;
-
-    /*Flecha de la derecha*/
-    background-image: url(/iconos/sort-down-solid3.png);
 
     /*Otros*/
     transition: 0s;
@@ -518,7 +503,7 @@
     margin: 0% 0% 0% 5%;
     line-height: 40px;
 }
-.cuestionario input[type="button"]{
+.boton-cuestionario{
     /*Dimensiones*/
     padding: 0.6% 2.4% 0.6% 2.4%;
 
@@ -540,7 +525,7 @@
     cursor: pointer;
     z-index: 2;
 }
-.cuestionario input[type="button"]:hover{
+.boton-cuestionario:hover{
     /*Colores*/
     background-color: #eebbc3;
     color: #232946;
@@ -551,12 +536,33 @@
     /*Animación*/
     transition: 0.2s;
 }
-.cuestionario input[type="button"]:hover:active{
+.boton-cuestionario:hover:active{
     /*Colores*/
     color: #fffffe;
 
     /*Animación*/
     transition: 0s;
+}
+.boton-cuestionario2{
+    /*Dimensiones*/
+    padding: 0.6% 2.4% 0.6% 2.4%;
+
+    /*Bordes*/
+    border: 1px solid #fffffe;
+    border-radius: 6px;
+
+    /*Colores*/
+    background-color: transparent;
+    color: #fffffe;
+
+    /*Fuente*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+
+    /*Otros*/
+    text-decoration: none;
+    z-index: 2;
 }
 /*FALTAN MODIFICAR LOS CHECKBOX Y RADIO BUTTON*/
 .nosotros{

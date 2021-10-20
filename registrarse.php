@@ -13,7 +13,7 @@
 
         $servername = "localhost";
         $username = "root";
-        $password = "lab02";
+        $password = "";
         $database = "linguisticdb";
 
         $conexion = mysqli_connect($servername, $username,$password,$database);
