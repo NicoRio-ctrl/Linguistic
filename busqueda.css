@@ -4,7 +4,10 @@
     margin: 0%;
 }
 body{
+    /*Colores*/
     background-color: #232946;
+
+    /*Display*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,13 +49,13 @@ h1{
     z-index: 2;
 
     /*Margenes*/
-    margin: 1% 4% 0% 0.4%;
+    margin: 1% 4% 2.5% 0.4%;
 
     /*Otros*/
     z-index: 1;
 }
 .contenedor{
-    width: 80%;
+    width: 70%;
     height: 100%;
 }
 .descripcion{
@@ -66,7 +69,7 @@ h1{
 
     background-color: #fffffe;
 
-    border-radius: 6px;
+    border-radius: 4px;
 
     
 }
@@ -74,4 +77,34 @@ button{
     width: 10%;
     height: 10%;
 }
+.copiar{
+    /*Colores*/
+    background-color: transparent;
+    border: none;
+    color: #d4939d;
+    font-size: 26px;
 
+    /*Tamaño*/
+    width: auto;
+    height: auto;
+
+    /*Otros*/
+    cursor: pointer;
+}
+span{
+    /*Colores*/
+    color: #232946;
+    
+    /*Fuente*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+
+}
+a i{
+    margin: 1.25% 0% 5% 0%;
+    font-size: 36px;
+    color: #d4939d;
+
+    text-decoration: none;
+}

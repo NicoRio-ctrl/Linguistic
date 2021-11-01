@@ -71,10 +71,9 @@
                         }
                 ?>
                 <div>
-                    <span id="txt<?php echo $id ?>"><?php $ejemploespanol = $fila['ejemploespanol']; echo "$ejemploespanol";?><br>
-                    <?php $ejemploingles = $fila['ejemploingles']; echo "$ejemploingles";?></span><br>
                     <form id="texto">
-                        <button type="button" class="copiar" data-clipboard-target="#txt<?php echo $id ?>"><i class="fas fa-copy"></i></button>
+                        <span>Tema <button type="button" class="copiar" data-clipboard-target="#txt<?php echo $id ?>"><i class="fas fa-copy"></i></button></span><br><span id="txt<?php echo $id ?>"><?php $ejemploespanol = $fila['ejemploespanol']; echo "$ejemploespanol";?><br>
+                        <?php $ejemploingles = $fila['ejemploingles']; echo "$ejemploingles";?></span>
                     </form>
                 </div>
 
