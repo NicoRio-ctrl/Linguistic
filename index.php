@@ -40,6 +40,8 @@
 
         <?php
             session_start();
+
+            $conexion = mysqli_connect("localhost", "root", "lab02", "linguisticdb");
         ?>
 
         <nav class="options">
@@ -91,8 +93,8 @@
                     <center>
                         <div class="input-contenedor-temas">
                             <form method="POST" action="busqueda.php">
-                                <select class="input" name="tema" value="none" id="tipo" required>
-                                    <option selected="select" value="none" id="none">Tema</option>
+                                <select class="input" name="tema" id="tipo" required>
+                                    <option selected="select" value="none">Tema</option>
                                     <option value="Ciencia"id="Ciencia">Ciencia</option>
                                     <option value="Clima"id="Clima">Clima</option>
                                     <option value="Deportes"id="Deportes">Deportes</option>
@@ -120,7 +122,7 @@
 
                             <form method="POST" action="busqueda.php">
                             <select class="input" name="tema" id="tipo" required>
-                                <option selected="select" value="none" id="none">Tema</option>
+                                <option selected="select" value="none">Tema</option>
                                 <option value="Clausulas relativas"id="Clausulas relativas">Cláusulas relativas</option>
                                 <option value="Comparacion"id="Comparacion">Comparaciones</option>
                                 <option value="Contables"id="Contables">Contables</option>
@@ -147,7 +149,7 @@
 
                             <form method="POST" action="busqueda.php">
                             <select class="input" name="tema" id="tipo" required>
-                                <option selected="select" value="none" id="none">Tema</option>
+                                <option selected="select" value="none">Tema</option>
                                 <option value="Ensayo"id="Ensayo">Ensayo</option>
                                 <option value="Articulo"id="Articulo">Articulo</option>
                                 <option value="Resenia"id="Resenia">Reseña</option>
@@ -262,7 +264,6 @@
                 <div class="usuario-temas">
                     <h2>Usuarios</h2>
                     <p><?php
-                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
                         $consulta = "SELECT * FROM usuarios";
                         $usuarios = mysqli_query($conexion, $consulta);
                           
@@ -278,32 +279,14 @@
                 <div class="usuario-temas">
                     <h2>Nivel</h2>
                     <p><?php
-                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
-                        $consulta = "SELECT AVG(nivel) FROM cuestionario";
-                        $nivel = mysqli_query($conexion, $consulta);
-
-                        $n = 0;
-                        while(mysqli_fetch_array($nivel)){
-                            $n++;
-                        }
-
-                        echo "$n";
+                        
                     ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Estudiando...</h2>
                     <p><?php
-                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
-                        $consulta = "SELECT AVG(anios) FROM cuestionario";
-                        $anios = mysqli_query($conexion, $consulta);
                         
-                        $an = 0;
-                        while(mysqli_fetch_array($anios)){
-                            $an++;
-                        }
-                                                
-                        echo "$an";
                     ?></p>
                 </div>
 
@@ -314,7 +297,6 @@
                 <div class="usuario-temas">
                     <h2>Definiciones</h2>
                     <p><?php
-                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
                     $consulta = "SELECT * FROM contenido WHERE topico = 'Vocabulario'";
                     $definiciones = mysqli_query($conexion, $consulta);
                       
@@ -331,7 +313,6 @@
                 <div class="usuario-temas">
                     <h2>Temas</h2>
                     <p><?php
-                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
                     $consulta = "SELECT * FROM contenido WHERE topico = 'Gramatica'";
                     $temas = mysqli_query($conexion, $consulta);
                       
@@ -348,7 +329,6 @@
                 <div class="usuario-temas">
                     <h2>Textos</h2>
                     <p><?php
-                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
                     $consulta = "SELECT * FROM contenido WHERE topico = 'Escrito'";
                     $textos = mysqli_query($conexion, $consulta);
                       

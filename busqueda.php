@@ -18,7 +18,7 @@
             
             $servername = "localhost";
             $username = "root";
-            $password = "";
+            $password = "lab02";
             $database = "linguisticdb";
     
             $conexion = mysqli_connect($servername, $username,$password,$database);
@@ -28,6 +28,10 @@
                 //echo "<p>Conexión exitosa.</p>";
             }else{
                 echo "<p>No se ha podido conectar con la base de datos.</p>";
+            }
+
+            if($_POST['tema'] == 'none' and !isset($_POST['aleatorio'])){
+                echo "<script>alert('Debe seleccionar un tema.'); window.location.href = 'index.php';</script>";
             }
 
             if(isset($_POST['buscar'])){
