@@ -29,12 +29,15 @@
             }else{
                 echo "<p>No se ha podido conectar con la base de datos.</p>";
             }
+
             if(isset($_POST['buscar'])){
+
                 $topico = $_POST['buscar'];
                 $tema = $_POST['tema'];
-                
                 $consulta = "SELECT * FROM contenido where topico='$topico' and tema='$tema'";
+
             }else if(isset($_POST['aleatorio'])){
+
                 $topico = $_POST['aleatorio'];
                 if($topico == 'Vocabulario'){
                     $consulta = "SELECT * FROM contenido WHERE topico='$topico' ORDER BY RAND() LIMIT 20";
@@ -72,7 +75,7 @@
                 ?>
                 <div>
                     <form id="texto">
-                        <span>Tema <button type="button" class="copiar" data-clipboard-target="#txt<?php echo $id ?>"><i class="fas fa-copy"></i></button></span><br><span id="txt<?php echo $id ?>"><?php $ejemploespanol = $fila['ejemploespanol']; echo "$ejemploespanol";?><br>
+                        <span><p>Tema<button type="button" class="copiar" data-clipboard-target="#txt<?php echo $id ?>"><i class="fas fa-copy"></i></button></p></span><span id="txt<?php echo $id ?>"><?php $ejemploespanol = $fila['ejemploespanol']; echo "$ejemploespanol";?><br>
                         <?php $ejemploingles = $fila['ejemploingles']; echo "$ejemploingles";?></span>
                     </form>
                 </div>

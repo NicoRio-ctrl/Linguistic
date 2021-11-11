@@ -35,12 +35,12 @@
                 $consulta = "SELECT * FROM cuestionario";
                 $datos = mysqli_query($conexion,$consulta);
             }
+
+            $consulta = "INSERT INTO cuestionario(mail, anios, nivel, examenes, lugar, otros_i) VALUES('$mail', '$anios', '$nivel', '$lugar', '$examenes', '$otros_i')";
+            mysqli_query($conexion,$consulta);
             
             if($datos != ""){
-                $consulta = "UPDATE cuestionario SET anios = '$anios', nivel = '$nivel', lugar = '$lugar', examenes = '$examenes', otros_i = '$otros_i'";
-                mysqli_query($conexion,$consulta);
-            }else{
-                $consulta = "INSERT INTO cuestionario(mail, anios, nivel, examenes, lugar, otros_i) VALUES('$mail', '$anios', '$nivel', '$lugar', '$examenes', '$otros_i')";
+                $consulta = "UPDATE cuestionario SET anios = '$anios', nivel = '$nivel', lugar = '$lugar', examenes = '$examenes', otros_i = '$otros_i' WHERE mail = '$mail'";
                 mysqli_query($conexion,$consulta);
             }
 

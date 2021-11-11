@@ -91,8 +91,8 @@
                     <center>
                         <div class="input-contenedor-temas">
                             <form method="POST" action="busqueda.php">
-                                <select class="input" name="tema" id="tipo" required>
-                                    <option selected="select" id="none">Tema</option>
+                                <select class="input" name="tema" value="none" id="tipo" required>
+                                    <option selected="select" value="none" id="none">Tema</option>
                                     <option value="Ciencia"id="Ciencia">Ciencia</option>
                                     <option value="Clima"id="Clima">Clima</option>
                                     <option value="Deportes"id="Deportes">Deportes</option>
@@ -119,8 +119,8 @@
                         <div class="input-contenedor-temas">
 
                             <form method="POST" action="busqueda.php">
-                            <select class="input" name="tema" id="tipo">
-                                <option selected="select" id="none">Tema</option>
+                            <select class="input" name="tema" id="tipo" required>
+                                <option selected="select" value="none" id="none">Tema</option>
                                 <option value="Clausulas relativas"id="Clausulas relativas">Cláusulas relativas</option>
                                 <option value="Comparacion"id="Comparacion">Comparaciones</option>
                                 <option value="Contables"id="Contables">Contables</option>
@@ -146,8 +146,8 @@
                         <div class="input-contenedor-temas">
 
                             <form method="POST" action="busqueda.php">
-                            <select class="input" name="tema" id="tipo">
-                                <option selected="select" id="none">Tema</option>
+                            <select class="input" name="tema" id="tipo" required>
+                                <option selected="select" value="none" id="none">Tema</option>
                                 <option value="Ensayo"id="Ensayo">Ensayo</option>
                                 <option value="Articulo"id="Articulo">Articulo</option>
                                 <option value="Resenia"id="Resenia">Reseña</option>
@@ -179,20 +179,20 @@
                     <div class="pre-izquierda">
                         <h2>¿Cuántos años llevas estudiando?</h2>
                         <ul>
-                            <li type="none"><label><input type="radio" name="anios" value="No estudio inglés">&nbsp;No estudio inglés</label></li>
-                            <li type="none"><label><input type="radio" name="anios" value="Menos de un año">&nbsp;Menos de un año</label></li>
-                            <li type="none"><label><input type="radio" name="anios" value="De uno a tres años">&nbsp;De uno a tres años</label></li>
-                            <li type="none"><label><input type="radio" name="anios" value="De tres a seis años">&nbsp;De tres a seis años</label></li>
-                            <li type="none"><label><input type="radio" name="anios" value="Más de seis años">&nbsp;Más de seis años</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="1">&nbsp;No estudio inglés</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="2">&nbsp;Menos de un año</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="3">&nbsp;De uno a tres años</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="4">&nbsp;De tres a seis años</label></li>
+                            <li type="none"><label><input type="radio" name="anios" value="5">&nbsp;Más de seis años</label></li>
                         </ul>
                         <br>
                         <br>
 
                         <h2>Consideras que tienes un conocimiento del idioma...</h2>
                         <ul>
-                            <li type="none"><label><input type="radio" name="nivel" value="Básico">&nbsp;Básico</label></li>
-                            <li type="none"><label><input type="radio" name="nivel" value="Intermedio">&nbsp;Intermedio</label></li>
-                            <li type="none"><label><input type="radio" name="nivel" value="Avanzado">&nbsp;Avanzado</label></li>
+                            <li type="none"><label><input type="radio" name="nivel" value="1">&nbsp;Básico</label></li>
+                            <li type="none"><label><input type="radio" name="nivel" value="2">&nbsp;Intermedio</label></li>
+                            <li type="none"><label><input type="radio" name="nivel" value="3">&nbsp;Avanzado</label></li>
                         </ul>
                         <br>
                         <br>
@@ -262,21 +262,48 @@
                 <div class="usuario-temas">
                     <h2>Usuarios</h2>
                     <p><?php
-                        
+                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                        $consulta = "SELECT * FROM usuarios";
+                        $usuarios = mysqli_query($conexion, $consulta);
+                          
+                        $u = 0;
+                        while(mysqli_fetch_array($usuarios)){
+                            $u++;
+                        }
+                                                  
+                        echo "$u";
                     ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Nivel</h2>
                     <p><?php
-                        
+                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                        $consulta = "SELECT AVG(nivel) FROM cuestionario";
+                        $nivel = mysqli_query($conexion, $consulta);
+
+                        $n = 0;
+                        while(mysqli_fetch_array($nivel)){
+                            $n++;
+                        }
+
+                        echo "$n";
                     ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Estudiando...</h2>
                     <p><?php
+                        $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                        $consulta = "SELECT AVG(anios) FROM cuestionario";
+                        $anios = mysqli_query($conexion, $consulta);
                         
+                        $an = 0;
+                        while(mysqli_fetch_array($anios)){
+                            $an++;
+                        }
+                                                
+                        echo "$an";
                     ?></p>
                 </div>
 
@@ -287,6 +314,16 @@
                 <div class="usuario-temas">
                     <h2>Definiciones</h2>
                     <p><?php
+                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                    $consulta = "SELECT * FROM contenido WHERE topico = 'Vocabulario'";
+                    $definiciones = mysqli_query($conexion, $consulta);
+                      
+                    $d = 0;
+                    while(mysqli_fetch_array($definiciones)){
+                        $d++;
+                    }
+                                              
+                    echo "$d";
                         
                     ?></p>
                 </div>
@@ -294,6 +331,16 @@
                 <div class="usuario-temas">
                     <h2>Temas</h2>
                     <p><?php
+                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                    $consulta = "SELECT * FROM contenido WHERE topico = 'Gramatica'";
+                    $temas = mysqli_query($conexion, $consulta);
+                      
+                    $t = 0;
+                    while(mysqli_fetch_array($temas)){
+                        $t++;
+                    }
+                                              
+                    echo "$t";
                         
                     ?></p>
                 </div>
@@ -301,6 +348,16 @@
                 <div class="usuario-temas">
                     <h2>Textos</h2>
                     <p><?php
+                    $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
+                    $consulta = "SELECT * FROM contenido WHERE topico = 'Escrito'";
+                    $textos = mysqli_query($conexion, $consulta);
+                      
+                    $te = 0;
+                    while(mysqli_fetch_array($textos)){
+                        $te++;
+                    }
+                                              
+                    echo "$te";
                         
                     ?></p>
                 </div>

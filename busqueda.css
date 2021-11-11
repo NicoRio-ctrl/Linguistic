@@ -55,34 +55,71 @@ h1{
     z-index: 1;
 }
 .contenedor{
+    /*Dimensiones*/
     width: 70%;
     height: 100%;
+
+    /*Otros*/
+    z-index: 2;
 }
 .descripcion{
+    /*Dimensiones*/
     width: 60%;
     height: auto;
+
+    /*Otros*/
     text-align: center;
 }
 .resultados{
+    /*Dimensiones*/
     width: 100%;
     height: auto;
 
+    /*Colores*/
     background-color: #fffffe;
 
+    /*Bordes*/
     border-radius: 4px;
 
-    
+    /*Padding*/
+    padding: 3% 0% 3% 0%;
+
+    /*Otros*/
+    z-index: 2;
 }
 button{
+    /*Dimensiones*/
     width: 10%;
     height: 10%;
+}
+.contenedor .resultados{
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor .resultados div{
+    /*Dimensiones*/
+    width: 90%;
+}
+span p{
+    /*Fuente*/
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+
+    /*Otros*/
+    z-index: 3;
 }
 .copiar{
     /*Colores*/
     background-color: transparent;
     border: none;
     color: #d4939d;
-    font-size: 26px;
+    font-size: 36px;
+
+    /*Margenes*/
+    margin-left: 0.5%;
 
     /*Tamaño*/
     width: auto;
@@ -100,11 +137,19 @@ span{
     font-weight: 300;
     font-size: 26px;
 
+    text-indent: -1%;
 }
 a i{
+    /*Margenes*/
     margin: 1.25% 0% 5% 0%;
+
+    /*Tamaño*/
     font-size: 36px;
+
+    /*Color*/
     color: #d4939d;
 
+    /*Otros*/
+    z-index: 2;
     text-decoration: none;
 }
