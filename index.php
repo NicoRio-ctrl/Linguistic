@@ -279,14 +279,40 @@
                 <div class="usuario-temas">
                     <h2>Nivel</h2>
                     <p><?php
-                        
+                        $consulta = "SELECT AVG(nivel) AS prom FROM cuestionario";
+                        $res = mysqli_query($conexion, $consulta);
+                        $row = mysqli_fetch_array($res);
+                        $prom = $row['prom'];
+
+                        if($prom >= 1 && $prom <= 1.99){
+                            echo 'Básico';
+                        }else if($prom >= 2 && $prom <= 2.99){
+                            echo 'Intermedio';
+                        }else{
+                            echo 'Avanzado';
+                        }       
                     ?></p>
                 </div>
     
                 <div class="usuario-temas">
                     <h2>Estudiando...</h2>
                     <p><?php
-                        
+                        $consulta = "SELECT AVG(anios) AS prom FROM cuestionario";
+                        $res = mysqli_query($conexion, $consulta);
+                        $row = mysqli_fetch_array($res);
+                        $prom = $row['prom'];
+                                   
+                        if($prom >= 1 && $prom <= 1.99){
+                            echo 'No estudian';
+                        }else if($prom >= 2 && $prom <= 2.99){
+                            echo 'Por menos de 1 año';
+                        }else if($prom >= 3 && $prom <= 3.99){
+                            echo 'De 1 a 3 años';
+                        }else if($prom >= 4 && $prom <= 4.99){
+                            echo 'De 3 a 6 años';
+                        }else{
+                            echo 'Por más de 6 años';
+                        }
                     ?></p>
                 </div>
 
