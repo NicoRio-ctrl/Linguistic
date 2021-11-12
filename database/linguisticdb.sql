@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 20:31:36
--- Versión del servidor: 5.7.18-log
--- Versión de PHP: 8.0.8
+-- Tiempo de generación: 12-11-2021 a las 01:10:31
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -168,23 +168,53 @@ INSERT INTO `contenido` (`topico`, `tema`, `ejemploespanol`, `ejemploingles`) VA
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `cuestionario`
+--
+
+CREATE TABLE `cuestionario` (
+  `mail` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
+  `anios` int(1) NOT NULL,
+  `nivel` int(1) NOT NULL,
+  `examenes` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
+  `lugar` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
+  `otros_i` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `cuestionario`
+--
+
+INSERT INTO `cuestionario` (`mail`, `anios`, `nivel`, `examenes`, `lugar`, `otros_i`) VALUES
+('test1@gmail.com', 3, 2, 'KET', 'En un instituto', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `contrasena` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `correo` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
-  `otros_idiomas` tinyint(1) DEFAULT NULL,
-  `nivel_idioma` int(11) DEFAULT NULL,
-  `examen` char(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
-  `lugar_estudio` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
-  `tiempo` int(11) DEFAULT NULL
+  `correo` varchar(40) COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`nombre`, `contrasena`, `correo`) VALUES
+('Carlos', 'test1', 'test1@gmail.com');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `cuestionario`
+--
+ALTER TABLE `cuestionario`
+  ADD PRIMARY KEY (`mail`);
 
 --
 -- Indices de la tabla `usuarios`
