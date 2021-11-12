@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2021 a las 01:10:31
+-- Tiempo de generación: 12-11-2021 a las 21:11:40
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -175,7 +175,7 @@ CREATE TABLE `cuestionario` (
   `mail` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
   `anios` int(1) NOT NULL,
   `nivel` int(1) NOT NULL,
-  `examenes` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
+  `examenes` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `lugar` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `otros_i` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
@@ -185,7 +185,36 @@ CREATE TABLE `cuestionario` (
 --
 
 INSERT INTO `cuestionario` (`mail`, `anios`, `nivel`, `examenes`, `lugar`, `otros_i`) VALUES
-('test1@gmail.com', 3, 2, 'KET', 'En un instituto', 1);
+('test1@gmail.com', 3, 2, 'PET KET', 'En el colegio', 1),
+('test10@gmail.com', 1, 1, 'Otro', 'No estudio en ningún lugar', 1),
+('test11@gmail.com', 1, 1, '', 'No estudio en ningún lugar', 0),
+('test12@gmail.com', 5, 3, 'FCE', 'En un instituto', 0),
+('test13@gmail.com', 2, 2, 'PET KET', 'En un instituto', 1),
+('test14@gmail.com', 3, 2, 'FCE', 'En casa (Autodidacta)', 1),
+('test15@gmail.com', 2, 1, 'Otro', 'En el colegio', 1),
+('test16@gmail.com', 5, 3, 'FCE', 'Otro', 0),
+('test17@gmail.com', 4, 1, 'PET', 'En el colegio', 1),
+('test18@gmail.com', 5, 1, '', 'En el colegio', 0),
+('test19@gmail.com', 5, 3, 'CPE CAE FCE PET KET Otro', 'En casa (Autodidacta)', 1),
+('test2@gmail.com', 4, 1, 'PET Otro', 'En el colegio', 0),
+('test20@gmail.com', 4, 2, 'FCE', 'En el colegio', 1),
+('test21@gmail.com', 5, 3, 'CAE', 'En casa (Autodidacta)', 0),
+('test22@gmail.com', 4, 3, 'CPE CAE', 'En un instituto', 0),
+('test23@gmail.com', 4, 1, 'KET Otro', 'En el colegio', 1),
+('test24@gmail.com', 4, 2, 'FCE', 'En un instituto', 0),
+('test25@gmail.com', 5, 3, 'CPE FCE', 'En un instituto', 0),
+('test26@gmail.com', 1, 1, '', 'No estudio en ningún lugar', 0),
+('test27@gmail.com', 4, 2, 'FCE PET KET', 'En casa (Autodidacta)', 0),
+('test28@gmail.com', 1, 1, 'Otro', 'No estudio en ningún lugar', 1),
+('test29@gmail.com', 3, 2, 'FCE PET', 'En un instituto', 0),
+('test3@gmail.com', 4, 2, 'FCE', 'En casa (Autodidacta)', 0),
+('test30@gmail.com', 5, 3, 'CPE FCE', 'En un instituto', 1),
+('test4@gmail.com', 5, 3, 'CAE FCE', 'En un instituto', 0),
+('test5@gmail.com', 5, 1, '', 'En el colegio', 0),
+('test6@gmail.com', 2, 1, '', 'En casa (Autodidacta)', 0),
+('test7@gmail.com', 5, 3, 'CPE Otro', 'En casa (Autodidacta)', 1),
+('test8@gmail.com', 5, 3, 'FCE', 'En un instituto', 0),
+('test9@gmail.com', 4, 2, 'Otro', 'En el colegio', 1);
 
 -- --------------------------------------------------------
 
@@ -204,7 +233,36 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`nombre`, `contrasena`, `correo`) VALUES
-('Carlos', 'test1', 'test1@gmail.com');
+('Carlos', 'test1', 'test1@gmail.com'),
+('María', 'test10', 'test10@gmail.com'),
+('Jorge', 'test11', 'test11@gmail.com'),
+('Nicolás', 'test12', 'test12@gmail.com'),
+('Naju', 'test13', 'test13@gmail.com'),
+('Horacio', 'test14', 'test14@gmail.com'),
+('Daniel', 'test15', 'test15@gmail.com'),
+('Iván', 'test16', 'test16@gmail.com'),
+('Saúl', 'test17', 'test17@gmail.com'),
+('Raúl', 'test18', 'test18@gmail.com'),
+('William', 'test19', 'test19@gmail.com'),
+('Andrea', 'test2', 'test2@gmail.com'),
+('Nélida', 'test20', 'test20@gmail.com'),
+('Bruno', 'test21', 'test21@gmail.com'),
+('Facundo', 'test22', 'test22@gmail.com'),
+('Alejandro', 'test23', 'test23@gmail.com'),
+('Román', 'test24', 'test24@gmail.com'),
+('Brenda', 'test25', 'test25@gmail.com'),
+('Melina', 'test26', 'test26@gmail.com'),
+('Jazmín', 'test27', 'test27@gmail.com'),
+('Rubén', 'test28', 'test28@gmail.com'),
+('Luis', 'test29', 'test29@gmail.com'),
+('Nahuel', 'test3', 'test3@gmail.com'),
+('Camila', 'test30', 'test30@gmail.com'),
+('Federico', 'test4', 'test4@gmail.com'),
+('Francisco', 'test5', 'test5@gmail.com'),
+('Sofia', 'test6', 'test6@gmail.com'),
+('Franco', 'test7', 'test7@gmail.com'),
+('Santiago', 'test8', 'test8@gmail.com'),
+('Abril', 'test9', 'test9@gmail.com');
 
 --
 -- Índices para tablas volcadas
