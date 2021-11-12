@@ -41,7 +41,7 @@
         <?php
             session_start();
 
-            $conexion = mysqli_connect("localhost", "root", "lab02", "linguisticdb");
+            $conexion = mysqli_connect("localhost", "root", "", "linguisticdb");
         ?>
 
         <nav class="options">
@@ -212,13 +212,12 @@
                     <div class="pre-derecha">
                         <h2>¿Cuáles de los siguientes exámenes rendiste?</h2>
                         <ul>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="CPE">&nbsp;Certificate of Proficiency in English (CPE)</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="CAE">&nbsp;Certificate in Advance English (CAE)</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="FCE">&nbsp;First Certificate English (FCE)</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="PET">&nbsp;Preliminary English Test (PET)</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="KET">&nbsp;Key English Test (KET)</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="No">&nbsp;No rendí ningún exámen</label></li>
-                            <li type="none"><label><input type="checkbox" name="examenes" value="Otro">&nbsp;Otro</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="CPE">&nbsp;Certificate of Proficiency in English (CPE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="CAE">&nbsp;Certificate in Advance English (CAE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="FCE">&nbsp;First Certificate English (FCE)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="PET">&nbsp;Preliminary English Test (PET)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="KET">&nbsp;Key English Test (KET)</label></li>
+                            <li type="none"><label><input type="checkbox" name="examenes[]" value="Otro">&nbsp;Otro</label></li>
                         </ul>
                         <br>
                         <br>

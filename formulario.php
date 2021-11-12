@@ -1,6 +1,5 @@
 <html>
     <head>
-
     </head>
     <body>
         <?php
@@ -21,31 +20,44 @@
             }
 
             session_start();
-            
-            $mail = $_SESSION['usuario'];
-            $anios = $_POST['anios'];
-            $nivel = $_POST['nivel'];
-            $lugar = $_POST['lugar'];
-            $examenes = $_POST['examenes'];
-            $otros_i = $_POST['otros_i'];
 
-            if($_POST['anios'] == "" or $_POST['nivel'] == "" or $_POST['lugar'] == "" or $_POST['examenes'] == "" or $_POST['otros_i'] == ""){
+
+            if($_POST['anios'] == "" or $_POST['nivel'] == "" or $_POST['lugar'] == "" or $_POST['otros_i'] == ""){
+
                 echo "<script>alert('Complete todos los campos e intentelo nuevamente'); window.location.href='index.php';</script>";
+
             }else{
+
                 $consulta = "SELECT * FROM cuestionario";
                 $datos = mysqli_query($conexion,$consulta);
-            }
 
-            $consulta = "INSERT INTO cuestionario(mail, anios, nivel, examenes, lugar, otros_i) VALUES('$mail', '$anios', '$nivel', '$lugar', '$examenes', '$otros_i')";
-            mysqli_query($conexion,$consulta);
-            
-            if($datos != ""){
-                $consulta = "UPDATE cuestionario SET anios = '$anios', nivel = '$nivel', lugar = '$lugar', examenes = '$examenes', otros_i = '$otros_i' WHERE mail = '$mail'";
+
+                $mail = $_SESSION['usuario'];
+                $anios = $_POST['anios'];
+                $nivel = $_POST['nivel'];
+                $lugar = $_POST['lugar'];
+                $otros_i = $_POST['otros_i'];
+                if(isset($_POST['examenes'])){
+                    $examenes = implode(' ',$_POST['examenes']);
+
+                    $consulta = "INSERT INTO cuestionario(mail, anios, nivel, examenes, lugar, otros_i) VALUES('$mail', '$anios', '$nivel', '$lugar', '$examenes', '$otros_i')";
+                }
+                
+                
+                $consulta = "INSERT INTO cuestionario(mail, anios, nivel, lugar, otros_i) VALUES('$mail', '$anios', '$nivel', '$lugar', '$otros_i')";
                 mysqli_query($conexion,$consulta);
+
+            
+                if($datos != ""){
+
+                    $consulta = "UPDATE cuestionario SET anios = '$anios', nivel = '$nivel', lugar = '$lugar', examenes = '$examenes', otros_i = '$otros_i' WHERE mail = '$mail'";
+                    mysqli_query($conexion,$consulta);
+
+                }
+
+                echo "<script>alert('Hemos cargado sus respuestas en nuestra base de datos.'); window.location.href='index.php';</script>";
+
             }
-
-            echo "<script>alert('Hemos cargado sus respuestas en nuestra base de datos.'); window.location.href='index.php';</script>";
-
         ?>
     </body>
 </html>
