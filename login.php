@@ -32,9 +32,8 @@
         while($row = mysqli_fetch_array($result)) 
         { 
             $usuario=$row['correo'];
-            //$ct=password_verify($contra, $row['password']);
             $ct=$row['contrasena'];
-            if($usuario == $nombre && $contra == $ct){
+            if($usuario == $nombre && $contra == $ct){ 
                 session_start();
                 $nombre=$row['nombre'];
                 $_SESSION['usuario'] = $usuario;
@@ -42,6 +41,7 @@
                 header('Location: index.php');
                 return;
             }else if ($usuario == $nombre && $contra != $ct) {
+
                 echo "<script>alert('Contraseña incorrecta. Intente nuevamente.');</script>";
                 disconnectDB($conexion);
                 return;

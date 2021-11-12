@@ -10,48 +10,50 @@
     </head>
 
     <?php
-
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "linguisticdb";
-
-        $conexion = mysqli_connect($servername, $username,$password,$database);
-
-        if($conexion){
-
-            //echo "<p>Conexión exitosa.</p>";
-        }else{
-            echo "<p>No se ha podido conectar con la base de datos.</p>";
+        $server = 'localhost';
+        $username = 'root';
+        $password = '';
+        $database = 'linguisticdb';
+        try{
+            $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+            } catch (PDOException $e){
+            die('conexion fallida: '.$e->getMessage());
         }
 
         if(isset($_POST['enviar'])) {
           if($_POST['nombre'] == '' or $_POST['correo'] == '' or $_POST['password'] == '' or $_POST['repassword'] == '') {
               echo "<script>alert('Complete todos los campos e intentelo nuevamente');</script>";;
           } else {
-              $sql = 'SELECT * FROM usuarios';
+            $correo = $_POST['correo'];
+            if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+              $sql = 'SELECT correo FROM usuarios';
+              $conexion = mysqli_connect($server, $username, $password, $database);
               $rec = mysqli_query($conexion,$sql);
               $verificar_usuario = 1;
               while($result = mysqli_fetch_object($rec)) {
-                  if($result->email == $_POST['correo']) {
+                  if($result->correo == $_POST['correo']) {
                       $verificar_usuario = 0;
                   }
               }
               if($verificar_usuario) {
-                  if($_POST['password'] == $_POST['repassword']) {
-                      $nombre = $_POST['nombre'];
-                      $usuario = $_POST['correo'];
-                      $password = $_POST['password'];
-                      $consulta = "INSERT INTO usuarios (nombre,contrasena,correo) VALUES ('$nombre','$password','$usuario')";
-                      mysqli_query($conexion, $consulta);
-                      echo "<script>alert('Usted se ha registrado exitosamente'); window.location.href = 'login.php'; </script>";
-                  } else {
-                      echo "<script>alert('Las contraseñas no coinciden. Intentelo nuevamente');</script>";
-                  }
+                if($_POST['password'] == $_POST['repassword']) {
+                    $consulta = "INSERT INTO usuarios (nombre, correo, contrasena) VALUES (:nombre, :correo, :contrasena)";
+                    $stmt = $conn->prepare($consulta);
+                    $stmt->bindParam(':nombre', $_POST['nombre']);
+                    $stmt->bindParam(':correo', $_POST['correo']);
+                    $stmt->bindParam(':contrasena', $_POST['password']);
+                    if ($stmt->execute())
+                    echo "<script>alert('Usted se ha registrado exitosamente'); window.location.href = 'login.php'; </script>";
+                } else {
+                    echo "<script>alert('Las contraseñas no coinciden. Intentelo nuevamente');</script>";
+                }
               } else {
                   echo "<script>alert('Este usuario ha sido registrado previamente');</script>";
               }
+           }else{
+            echo "<script>alert('Ingrese un correo válido.');</script>";
            }
+        }
         }
     ?>
 
